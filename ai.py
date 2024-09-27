@@ -386,8 +386,11 @@ def options():
     # Step 2: Chat with GPT to modify or get information from the JSON
     gpt_response = chat_with_gpt(user_input)
 
+ # Convert the string to a dictionary
+    response_dict = json.loads(gpt_response)
+
     # Step 3: Return the response as JSON
-    return gpt_response
+    return jsonify(response_dict)
 
 
 if __name__ == "__main__":
