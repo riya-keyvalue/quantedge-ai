@@ -5,7 +5,7 @@ import openai
 app = Flask(__name__)
 
 # Set your OpenAI API key
-openai.api_key = "sk-ALAdBLA8oDKq1s2sXS2Kpq85TZJER9Y_6lGEDkDM5wT3BlbkFJ3JCizfiR-FRRlMLnVKZY4yRvrCQe4yWQEPC2pKF3AA"
+openai.api_key = os.getenv('OPENAI_API_KEY')
 
 # Global variables to hold the conversation history and the JSON object
 conversation_history = []
